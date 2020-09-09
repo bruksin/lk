@@ -49,11 +49,11 @@
     <List>
       <ListItem
         title="Логи объекта"
-        link="/objectlog/3289/"
+        link="/objectlog/{$myuserdata.users_id}/{$myuserdata.users_token}/3289/"
       />
       <ListItem
         title="Профиль"
-        link="/user/{$myuserdata.userid}/{$myuserdata.sessionid}/"
+        link="/user/{$myuserdata.users_id}/{$myuserdata.users_token}/"
       />
     </List> 
       <Row>

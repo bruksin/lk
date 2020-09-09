@@ -5,10 +5,18 @@
     <hr>
     {user.users_mobile}
     <hr>
-    {user.users_cloud_login}
-    <hr>
     {user.users_login}
   </Block>
+  <List>
+    {#each user.objects as object}
+      <ListItem
+        link=''
+        title={`${object.contract_contract} ${object.users_Obj_code}`}
+        external
+        target="_blank"
+      />
+    {/each}
+  </List>
 </Page>
 <script>
   import { Page, Navbar, Block, List, ListItem } from 'framework7-svelte';

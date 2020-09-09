@@ -12,11 +12,7 @@ var routes = [
     component: HomePage,
   },
   {
-    path: '/objectlog/:pultId/',
-    component: ObjectLog,
-  }, 
-  {
-    path: '/user/:userId/:sessionId/',
+    path: '/objectlog/:userId/:Token/:pultId/',
     async: function (routeTo, routeFrom, resolve, reject) {
       // Router instance
       var router = this;
@@ -29,11 +25,54 @@ var routes = [
 
       // User ID from request
       var userId = routeTo.params.userId;
-      var sessionId = routeTo.params.sessionId;
+      var Token = routeTo.params.Token;
+      var pultId = routeTo.params.pultId;
 
       const question = {
-        userid: userId,
-        sessionid: sessionId
+        users_id: userId,
+        users_token: Token
+      }
+      console.log(question);
+
+      Question.objectlog(question, pultId).then( data => {
+        var events = data;
+
+        // Hide Preloader
+        app.preloader.hide();
+
+          // Resolve route to load page
+          resolve(
+            {
+              component: ObjectLog,
+            },
+            {
+              context: {
+                events: events,
+              }
+            }
+          );
+      });
+    },
+  }, 
+  {
+    path: '/user/:userId/:Token/',
+    async: function (routeTo, routeFrom, resolve, reject) {
+      // Router instance
+      var router = this;
+
+      // App instance
+      var app = router.app;
+
+      // Show Preloader
+      app.preloader.show();
+
+      // User ID from request
+      var userId = routeTo.params.userId;
+      var Token = routeTo.params.Token;
+
+      const question = {
+        users_id: userId,
+        users_token: Token
       }
 
       Question.create(question).then( data => {
