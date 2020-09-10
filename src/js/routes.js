@@ -3,6 +3,7 @@ import HomePage from '../pages/home.svelte';
 import RequestAndLoad from '../pages/user.svelte';
 import NotFoundPage from '../pages/404.svelte';
 import ObjectLog from '../pages/objectlog.svelte';
+import ObjectForm from '../pages/objectform.svelte';
 
 import {Question} from './question';
 
@@ -10,6 +11,10 @@ var routes = [
   {
     path: '/',
     component: HomePage,
+  },
+  {
+    path: '/objectform/',
+    component: ObjectForm,
   },
   {
     path: '/objectlog/:userId/:Token/:pultId/',

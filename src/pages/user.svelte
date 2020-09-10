@@ -7,19 +7,25 @@
     <hr>
     {user.users_login}
   </Block>
-  <List>
+  <Block strong>
     {#each user.objects as object}
-      <ListItem
-        link=''
-        title={`${object.contract_contract} ${object.users_Obj_code}`}
-        external
-        target="_blank"
-      />
+      Договор: {object.contract_contract} <br>
+      Оформлен на: {object.contract_fio} <br>
+      Баланс: {object.contract_account}руб. (данные от {object.contract_timeaccount})<br>
+      Абонентская плата: {object.contract_fee} руб./мес.<br>
+      Адрес: {object.contract_address}<br>
+      email: {object.contract_email}<br>
+      Мобильный телефон: {object.contract_mobile}<br>
+      Последнее СМС уведомление: {object.contract_timesms}<br>
+      Пультовой: {object.users_Obj_code}<br>
+      Действующий договор: {object.contract_activ}<br>
+      <hr>
     {/each}
-  </List>
+  </Block>
 </Page>
 <script>
   import { Page, Navbar, Block, List, ListItem } from 'framework7-svelte';
+import Fab from 'framework7-svelte/components/fab.svelte';
 
   export let f7route;
 

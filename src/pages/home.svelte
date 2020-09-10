@@ -48,8 +48,8 @@
     {#if $myuserdata.result}
     <List>
       <ListItem
-        title="Логи объекта"
-        link="/objectlog/{$myuserdata.users_id}/{$myuserdata.users_token}/3289/"
+        title="Логи объектов"
+        link="/objectform/"
       />
       <ListItem
         title="Профиль"
