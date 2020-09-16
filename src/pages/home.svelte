@@ -15,7 +15,7 @@
     Button
   } from 'framework7-svelte';
 
-  import { myuserdata } from '../js/store';
+  import { myuserdata } from '../js/store.js';
 
   function logout() {
     localStorage.setItem('userdata', JSON.stringify({result: false}));

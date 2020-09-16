@@ -54,11 +54,11 @@
     ListButton,
     BlockFooter
   } from 'framework7-svelte';
-  import cordovaApp from '../js/cordova-app';
-  import routes from '../js/routes';
+  import cordovaApp from '../js/cordova-app.js';
+  import routes from '../js/routes.js';
 
-  import {Question} from '../js/question';
-  import { myuserdata } from '../js/store';
+  import {Question} from '../js/question.js';
+  import { myuserdata } from '../js/store.js';
 
   // Framework7 Parameters
   let f7params = {

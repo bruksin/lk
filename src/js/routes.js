@@ -5,7 +5,7 @@ import NotFoundPage from '../pages/404.svelte';
 import ObjectLog from '../pages/objectlog.svelte';
 import ObjectForm from '../pages/objectform.svelte';
 
-import {Question} from './question';
+import {Question} from './question.js';
 
 var routes = [
   {

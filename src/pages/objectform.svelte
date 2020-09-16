@@ -13,7 +13,7 @@
 <script>
   import { Page, Navbar, Block,  List, ListItem } from 'framework7-svelte';
 
-  import { myuserdata } from '../js/store';
+  import { myuserdata } from '../js/store.js';
 
   let objectcode = "1111"
 </script>

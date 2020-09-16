@@ -15,7 +15,7 @@
 </Page>
 <script>
   import { Page, Navbar, Block } from 'framework7-svelte';
-import { text } from 'svelte/internal';
+
   export let f7route;
   const events = f7route.context.events;
 </script>
