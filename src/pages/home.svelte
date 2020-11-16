@@ -39,13 +39,13 @@
   <Block strong>
     <p>Мобильное приложение для клиентов ЕТЦ</p>
 
-    {#if $myuserdata.result}
+    {#if $myuserdata && $myuserdata.result}
     <BlockTitle>Вы авторизовались</BlockTitle>
     {:else}
     <BlockTitle>Необходима авторизация</BlockTitle>
     {/if}
     <Block strong>
-    {#if $myuserdata.result}
+    {#if $myuserdata && $myuserdata.result}
     <List>
       <ListItem
         title="Логи объектов"
